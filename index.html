@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bố cục với display</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="page-header">
+        <p class="eyebrow">BÀI THỰC HÀNH CSS</p>
+        <h1>Bố cục trang web với display</h1>
+        <p>Sử dụng block, inline-block, width và max-width để xây dựng một giao diện ba cột.</p>
+    </header>
+
+    <nav class="main-nav" aria-label="Điều hướng chính">
+        <a class="active" href="#home">Trang chủ</a>
+        <a href="#about">Giới thiệu</a>
+        <a href="#services">Dịch vụ</a>
+        <a href="#contact">Liên hệ</a>
+    </nav>
+
+    <main id="home" class="container">
+        <section id="services" class="columns" aria-label="Các cột nội dung">
+            <article class="box box-blue">
+                <span class="box-number">01</span>
+                <div class="box-icon" aria-hidden="true">▦</div>
+                <h2>Display Block</h2>
+                <p>Phần tử block chiếm toàn bộ chiều rộng có sẵn và bắt đầu trên một dòng mới.</p>
+                <code>display: block;</code>
+            </article><!--
+
+         --><article class="box box-purple">
+                <span class="box-number">02</span>
+                <div class="box-icon" aria-hidden="true">▥</div>
+                <h2>Inline Block</h2>
+                <p>Inline-block cho phép các cột nằm cạnh nhau và vẫn thiết lập được kích thước.</p>
+                <code>display: inline-block;</code>
+            </article><!--
+
+         --><article class="box box-green">
+                <span class="box-number">03</span>
+                <div class="box-icon" aria-hidden="true">↔</div>
+                <h2>Width & Max-width</h2>
+                <p>Width xác định độ rộng cột; max-width giới hạn chiều rộng toàn bộ nội dung.</p>
+                <code>max-width: 1100px;</code>
+            </article>
+        </section>
+
+        <section id="about" class="explanation">
+            <div>
+                <p class="eyebrow">CÁCH HOẠT ĐỘNG</p>
+                <h2>Ba cột nằm trên cùng một hàng</h2>
+            </div>
+            <p>
+                Mỗi cột có <code>display: inline-block</code> và <code>width: 32%</code>.
+                Container dùng <code>max-width</code> để nội dung không kéo quá rộng trên màn hình lớn.
+            </p>
+        </section>
+    </main>
+
+    <footer id="contact">
+        <strong>Display Layout</strong>
+        <p>Bản quyền &copy; 2026 · Bài thực hành HTML & CSS</p>
+    </footer>
+</body>
+</html>
